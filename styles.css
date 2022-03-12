@@ -1,0 +1,102 @@
+.body {
+    /* background-image: url("sincerely-media-JemtZZxQFxY-unsplash.jpg"); */
+    background-color: rgb(255, 254, 194);
+}
+
+.h1 {
+    font-family: 'Smooch Sans', sans-serif;
+    font-size: 65px;
+    text-align: center;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    border: 1px solid black;
+    background-image: url("main_ava.jpg");
+    background-size: cover;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.bio {
+    font-family: 'Smooch Sans', sans-serif;
+    font-size: 45px;
+    text-align: center;
+}
+
+.socialpanel {
+    display: flex;
+    width: 30%;
+    border: 1px solid black;
+    margin: auto;
+}
+
+.social {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+#container {
+    width: 100%;
+    text-align: center;
+}
+
+#container>a {
+    width: calc(100% / 8);
+    display: inline-block;
+    vertical-align: top;
+    /* border: 1px solid red; */
+    text-align: center;
+    margin: 2%;
+    width: 100px;
+}
+
+#container>div {
+    width: calc(100% / 8);
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin: 2%;
+    width: 20%;
+    font-family: 'Smooch Sans', sans-serif;
+    font-size: 30px;
+}
+
+ul {
+    line-height: 200%;
+    text-align: left;
+    list-style-type: square;
+}
+
+
+/* unvisited link */
+
+a:link {
+    color: #d7034e;
+    font-size: 30px;
+}
+
+
+/* visited link */
+
+a:visited {
+    color: #d7034e;
+}
+
+
+/* mouse over link */
+
+a:hover {
+    color: #d7034e;
+    text-decoration: none;
+}
+
+
+/* selected link */
+
+a:active {
+    color: #d7034e;
+}
