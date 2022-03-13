@@ -57,11 +57,11 @@
     width: calc(100% / 8);
     display: inline-block;
     vertical-align: top;
-    text-align: center;
+    text-align: left;
     margin: 2%;
     width: 20%;
     font-family: 'Smooch Sans', sans-serif;
-    font-size: 30px;
+    font-size: 33px;
 }
 
 ul {
