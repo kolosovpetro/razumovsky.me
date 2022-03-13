@@ -44,7 +44,7 @@ jobs:
 
       - name: Copy Release to Remote
         run: |
-          scp -o StrictHostKeyChecking=no -r -i ~/.ssh/id_rsa * $SSH_USER@$SSH_HOST:/home/$SSH_USER/dist/razumovsky.me
+          scp -o StrictHostKeyChecking=no -r -i ~/.ssh/id_rsa * $SSH_USER@$SSH_HOST:/home/$SSH_USER/dist/razumovsky
         env:
           SSH_USER: ${{ secrets.AZURE_DEV_SSH_USER }}
           SSH_HOST: ${{ secrets.AZURE_DEV_SSH_HOST }}
