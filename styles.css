@@ -1,5 +1,4 @@
 .body {
-    /* background-image: url("sincerely-media-JemtZZxQFxY-unsplash.jpg"); */
     background-color: rgb(255, 254, 194);
 }
 
@@ -23,13 +22,6 @@
     font-family: 'Smooch Sans', sans-serif;
     font-size: 45px;
     text-align: center;
-}
-
-.socialpanel {
-    display: flex;
-    width: 30%;
-    border: 1px solid black;
-    margin: auto;
 }
 
 .social {
@@ -73,6 +65,7 @@ ul {
 a:link {
     color: #d7034e;
     font-size: 30px;
+    font-family: 'Smooch Sans', sans-serif;
 }
 
 
@@ -80,6 +73,7 @@ a:link {
 
 a:visited {
     color: #d7034e;
+    font-family: 'Smooch Sans', sans-serif;
 }
 
 
@@ -88,6 +82,7 @@ a:visited {
 a:hover {
     color: #d7034e;
     text-decoration: none;
+    font-family: 'Smooch Sans', sans-serif;
 }
 
 
@@ -95,4 +90,5 @@ a:hover {
 
 a:active {
     color: #d7034e;
+    font-family: 'Smooch Sans', sans-serif;
 }
