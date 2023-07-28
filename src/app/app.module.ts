@@ -11,6 +11,7 @@ import { MathComponent } from './components/math/math.component';
 import { OeisComponent } from './components/oeis/oeis.component';
 import { LinksComponent } from './components/links/links.component';
 import { QuotesComponent } from './components/quotes/quotes.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,11 +23,12 @@ import { QuotesComponent } from './components/quotes/quotes.component';
     MathComponent,
     OeisComponent,
     LinksComponent,
-    QuotesComponent
+    QuotesComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
