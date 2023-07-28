@@ -5,6 +5,7 @@ on:
     branches:
       - develop
       - master
+      - 
 
   pull_request:
     branches:
@@ -27,12 +28,12 @@ jobs:
       - name: 'Checkout'
         uses: actions/checkout@v3
 
-      - name: 'Setup Node.js 16.x'
+      - name: 'Setup Node.js 18.x'
         uses: actions/setup-node@v3
         with:
-          node-version: '16.x'
+          node-version: '18.x'
           cache: 'npm'
-          cache-dependency-path: 'MangoAPI.Client/package-lock.json'
+          cache-dependency-path: 'package-lock.json'
         
       - name: 'Print current node version'
         run: node -v
@@ -43,8 +44,8 @@ jobs:
       - name: 'Npm ci'
         run: npm ci
         
-      - name: 'Install angular cli 15.2.2'
-        run: npm install -g @angular/cli@15.2.2
+      - name: 'Install angular cli 15.2.6'
+        run: npm install -g @angular/cli@15.2.6
         
       - name: 'Print current angular cli version'
         run: ng version
