@@ -1,0 +1,53 @@
+name: Build Angular
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+
+  pull_request:
+    branches:
+      - develop
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  build-angular:
+    name: Build Angular
+    runs-on: ${{ matrix.environment }}
+    strategy:
+      matrix:
+        environment:
+          - ubuntu-latest
+          - windows-latest
+
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v3
+
+      - name: 'Setup Node.js 16.x'
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          cache: 'npm'
+          cache-dependency-path: 'MangoAPI.Client/package-lock.json'
+        
+      - name: 'Print current node version'
+        run: node -v
+        
+      - name: 'Print current npm version'
+        run: npm -v
+
+      - name: 'Npm ci'
+        run: npm ci
+        
+      - name: 'Install angular cli 15.2.2'
+        run: npm install -g @angular/cli@15.2.2
+        
+      - name: 'Print current angular cli version'
+        run: ng version
+
+      - name: 'Angular build'
+        run: ng build
