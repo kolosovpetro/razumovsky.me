@@ -1,0 +1,9 @@
+<div *ngFor="let topic of topics">{{topic.name}}
+	<ul [@projectLinkAnimation]>
+		<li *ngFor="let projectLink of topic.projectLinkList">
+			<a href="{{projectLink.link}}" target="_blank">
+				{{projectLink.name}}
+			</a>
+		</li>
+	</ul>
+</div>

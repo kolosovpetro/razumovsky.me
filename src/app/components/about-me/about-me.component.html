@@ -1,0 +1,8 @@
+<h1 class="h1" [@nicknameAnimation]>razumovsky_r</h1>
+<div class="avatar" [@avatarAnimation]></div>
+<p class="bio" id="headerText" [@bioAnimation]>.NET Developer & Azure DevOps Engineer</p>
+<div class="contactMe" [@aboutMeLinkAnimation]>
+  <a *ngFor="let aboutMeLink of links" href="{{aboutMeLink.link}}" target="blank">
+    <img class="social" src="{{aboutMeLink.imagePath}}" alt="social">
+  </a>
+</div>

@@ -1,0 +1,5 @@
+<div style="width: 80%" *ngFor="let topic of topics">{{topic.name}}:
+  <ul [@quoteItemAnimation]>
+    <li *ngFor="let quote of topic.quoteList">{{quote.text}}</li>
+  </ul>
+</div>

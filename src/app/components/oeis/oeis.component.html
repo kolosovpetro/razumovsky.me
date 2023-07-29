@@ -1,0 +1,10 @@
+<div style="width: 80%" *ngFor="let topic of topics">{{topic.name}}:
+  <ul [@oeisLinkAnimation]>
+    <li *ngFor="let oeisLink of topic.oeisLinkList"><a href="{{oeisLink.link}}"
+        target="_blank">{{oeisLink.name}}</a>{{oeisLink.description}}
+      <ng-container *ngIf="oeisLink.arxivLink">
+        <a href="{{oeisLink.arxivLink.link}}" target="_blank">{{oeisLink.arxivLink.name}}</a>
+      </ng-container>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,38 @@
+:host {
+  width: 100%;
+  text-align: center;
+}
+
+a {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  margin: 2%;
+  width: 100px;
+
+  &:hover {
+    color: #d7034e;
+    text-decoration: none;
+    font-family: 'Smooch Sans', sans-serif;
+  }
+}
+
+div {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  margin: 2%;
+  width: 20%;
+  font-family: 'Smooch Sans', sans-serif;
+  font-size: 33px;
+}
+
+.rounterLink {
+  font-size: 45px; 
+  color: black
+}
+
+.rounterLinkActive {
+  font-size: 45px; 
+  color: #d7034e
+}

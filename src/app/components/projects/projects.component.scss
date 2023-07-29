@@ -1,0 +1,38 @@
+:host {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+div {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  margin: 2%;
+  width: 20%;
+  font-family: 'Smooch Sans', sans-serif;
+  font-size: 33px;
+}
+
+ul {
+  margin-top: 33px;
+  line-height: 200%;
+  text-align: left;
+  list-style-type: square;
+  list-style-position: inside;
+  text-align: left;
+  font-size: 33px;
+}
+
+li {
+  position: relative;
+}
+
+a {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  width: 80%;
+  color: #d7034e;
+  font-size: 30px;
+}

@@ -1,0 +1,10 @@
+<div style="width: 80%">
+  <ul [@linkAnimation]>
+    <li *ngFor="let linkItem of links">
+      <a href="{{linkItem.link}}" target="_blank">{{linkItem.name}}</a> {{linkItem.description}}
+      <ng-container *ngIf="linkItem.googleLink">
+        <a href="{{linkItem.googleLink.link}}" target="_blank">{{linkItem.googleLink.name}}</a>
+      </ng-container>
+    </li>
+  </ul>
+</div>
