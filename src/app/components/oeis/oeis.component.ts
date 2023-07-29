@@ -10,9 +10,9 @@ import {animate, query, stagger, state, style, transition, trigger} from "@angul
   animations: [
     trigger('oeisLinkAnimation', [
       transition(':enter', [
-        query(':enter', style({ transform: 'translateY(-5px)', opacity: 0 }), { optional: true }),
+        query(':enter', style({ top: '-5px', opacity: 0 }), { optional: true }),
         query(':enter', stagger('40ms', [
-          animate('200ms', style({ transform: 'translateY(0)', opacity: 1 }))
+          animate('200ms', style({ top: '0px', opacity: 1 }))
         ]), { optional: true })
       ])
     ])

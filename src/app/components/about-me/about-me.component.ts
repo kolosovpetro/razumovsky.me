@@ -27,9 +27,9 @@ import { AboutMeLink } from 'src/app/models/AboutMeLink';
     ]),
     trigger('aboutMeLinkAnimation', [
       transition(':enter', [
-        query(':enter', style({ transform: 'translateY(-15px)', opacity: 0 }), { optional: true }),
+        query(':enter', style({ top: '-15px', opacity: 0 }), { optional: true }),
         query(':enter', stagger('100ms', [
-          animate('200ms 1.2s', style({ transform: 'translateY(0)', opacity: 1 }))
+          animate('200ms 1s', style({ top: '0px', opacity: 1 }))
         ]), { optional: true })
       ])
     ])

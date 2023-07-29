@@ -1,6 +1,6 @@
 <div style="width: 80%">
   <ul [@mathLinkAnimation]>
-    <li *ngFor="let topic of topics">{{topic.name}}
+    <li *ngFor="let topic of topics" class="mathTopic">{{topic.name}}
       <ul>
         <li *ngFor="let mathLink of topic.mathLinkList">
           <a href="{{mathLink.link}}" target="_blank">
