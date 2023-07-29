@@ -1,0 +1,65 @@
+﻿name: GitHub Pages Deploy DEV
+
+on:
+  push:
+    branches:
+      - github-pages
+      - gh-pages
+      - master
+
+  workflow_dispatch:
+
+env:
+  DEV_PAGE_NAME: "quetly3301"
+  PROD_PAGE_NAME: "kolosovpetro"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: 'Setup Node.js 18.x'
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+          cache-dependency-path: 'package-lock.json'
+
+      - name: 'Print current node version'
+        run: node -v
+
+      - name: 'Print current npm version'
+        run: npm -v
+
+      - name: 'Npm ci'
+        run: npm ci
+
+      - name: 'Install angular cli 15.2.6'
+        run: npm install -g @angular/cli@15.2.6
+
+      - name: 'Print current angular cli version'
+        run: ng version
+
+      - name: 'Angular build'
+        run: ng build
+
+#      - run: cp dist/mango-angular-frontend/index.html dist/mango-angular-frontend/404.html
+
+      - name: SSH-agent
+        uses: webfactory/ssh-agent@v0.8.0
+        with:
+          ssh-private-key: ${{ secrets.GITPAGES_DEPLOY_KEY }}
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          repository-name: ${{ env.DEV_PAGE_NAME }}/${{ env.DEV_PAGE_NAME }}.github.io
+          ssh-key: true
+          branch: main
+          folder: dist/home-page
+          clean: true
