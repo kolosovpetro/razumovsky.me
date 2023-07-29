@@ -77,7 +77,7 @@ export class ProjectsComponent {
       new ProjectLink("Covariant Factory", "https://github.com/kolosovpetro/CovariantFactory"),
       new ProjectLink("Contravariant List", "https://github.com/kolosovpetro/ContravariantList"),
       new ProjectLink("IoC Container", "https://github.com/kolosovpetro/IoC-Container"),
-      new ProjectLink("Computer Science", "Computer Science"),
+      new ProjectLink("Computer Science", "https://github.com/kolosovpetro/Computer-Science"),
     ])
   ];
 }
