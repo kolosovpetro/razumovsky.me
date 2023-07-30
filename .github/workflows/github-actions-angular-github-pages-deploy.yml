@@ -46,9 +46,10 @@ jobs:
         run: ng version
 
       - name: 'Angular build'
-        run: ng build
+        run: ng build --base-href "https://${{ env.DEV_PAGE_NAME }}.github.io"
 
-#      - run: cp dist/mango-angular-frontend/index.html dist/mango-angular-frontend/404.html
+      - name: 'Fix 404 error'
+        run: cp dist/home-page/index.html dist/home-page/404.html
 
       - name: SSH-agent
         uses: webfactory/ssh-agent@v0.8.0
