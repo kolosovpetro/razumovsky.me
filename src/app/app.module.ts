@@ -13,6 +13,7 @@ import { LinksComponent } from './components/links/links.component';
 import { QuotesComponent } from './components/quotes/quotes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { PdfFolderIndexComponent } from './components/pdf-folder-index/pdf-folder-index.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     LinksComponent,
     QuotesComponent,
     PageNotFoundComponent,
+    PdfFolderIndexComponent,
   ],
   imports: [
     BrowserModule,
