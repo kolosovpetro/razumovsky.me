@@ -6,22 +6,22 @@ import { OeisComponent } from './components/oeis/oeis.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { QuotesComponent } from './components/quotes/quotes.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
-import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.component";
-import {PdfFolderIndexComponent} from "./components/pdf-folder-index/pdf-folder-index.component";
+import { PageNotFoundComponent } from "./components/page-not-found/page-not-found.component";
+import { PdfFolderIndexComponent } from "./components/pdf-folder-index/pdf-folder-index.component";
 
 const routes: Routes = [
   {
     path: '', component: MainPageComponent,
     children: [
-      { path: '', component: ProjectsComponent},
+      { path: '', component: ProjectsComponent },
       { path: 'math', component: MathComponent },
       { path: 'oeis', component: OeisComponent },
       { path: 'links', component: LinksComponent },
-      { path: 'quotes', component: QuotesComponent },
-      { path: 'assets/pdf', component: PdfFolderIndexComponent },
-      { path: '**', component: PageNotFoundComponent },
+      { path: 'quotes', component: QuotesComponent }
     ]
-  }
+  },
+  { path: 'assets/pdf', component: PdfFolderIndexComponent },
+  { path: '**', component: PageNotFoundComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

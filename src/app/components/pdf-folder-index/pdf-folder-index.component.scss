@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.pdfIndexFolder {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.pdfIndexFolderContainer {
+  margin: 25px 15px;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: 800;
+  color: #404046;
+}
+
+table {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px #e9e8e8;
+}
+
+.pdfTable {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.pdfTable th {
+  font-size: 14px;
+  font-weight: 600;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  text-align: left;
+  background-color: #f9fafc;
+  color: #404046;
+}
+
+.pdfTable td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  color: #a0a0a0;
+
+  a {
+    position: relative;
+    margin-left: 5px;
+    top: -5px;
+  }
+}
+
+.pdfTable tr {
+  border-bottom: 2px solid #f3f3f3;
+}
