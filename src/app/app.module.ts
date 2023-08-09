@@ -13,7 +13,8 @@ import { LinksComponent } from './components/links/links.component';
 import { QuotesComponent } from './components/quotes/quotes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { PdfFolderIndexComponent } from './components/pdf-folder-index/pdf-folder-index.component';
+import { PdfFolderIndexComponent } from './pages/pdf-folder-index/pdf-folder-index.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PdfFolderIndexComponent } from './components/pdf-folder-index/pdf-folde
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

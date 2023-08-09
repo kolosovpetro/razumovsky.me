@@ -1,0 +1,18 @@
+<div class="pdfIndexFolder">
+  <div class="pdfIndexFolderContainer">
+    <h1 class="title">Index of .</h1>
+    <table class="pdfTable">
+      <tr>
+        <th>NAME</th>
+        <th>SIZE</th>
+      </tr>
+      <tr *ngFor="let pdfJsonItem of pdfJsonItems">
+        <td>
+          <img src="../../../assets/img/pdf.png" alt="">
+          <a href="{{pdfJsonItem.Path}}" target="_blank">{{pdfJsonItem.Name}}</a>
+        </td>
+        <td>{{pdfJsonItem.Size}} KB</td>
+      </tr>
+    </table>
+  </div>
+</div>
