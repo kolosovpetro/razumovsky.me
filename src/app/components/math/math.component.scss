@@ -30,6 +30,10 @@ a {
   text-align: left;
   color: #d7034e;
   font-size: 30px;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .mathTopic {
