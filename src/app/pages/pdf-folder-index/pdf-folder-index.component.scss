@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@font-face {
+  font-family: OpenSansFont;
+  src: url(/src/assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf) format("opentype");
+}
 
 .pdfIndexFolder {
-  font-family: 'Open Sans', sans-serif;
+  font-family: OpenSansFont, sans-serif;
 }
 
 .pdfIndexFolderContainer {
@@ -48,6 +51,7 @@ table {
     position: relative;
     margin-left: 5px;
     top: -5px;
+    text-decoration: none;
   }
 }
 

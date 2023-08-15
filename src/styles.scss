@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@500&display=swap');
+@font-face {
+  font-family: SmoochSansFont;
+  src: url(assets/fonts/SmoochSans-VariableFont_wght.ttf) format("opentype");
+}
 
 * {
 	box-sizing: border-box; 
@@ -31,7 +34,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	font-family: 'Smooch Sans', sans-serif;
+	font-family: SmoochSansFont, sans-serif;
+  font-weight: 500;
 }
 ol, ul {
 	list-style: none;
