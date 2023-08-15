@@ -12,7 +12,7 @@ import { OeisComponent } from './components/oeis/oeis.component';
 import { LinksComponent } from './components/links/links.component';
 import { QuotesComponent } from './components/quotes/quotes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { PdfFolderIndexComponent } from './pages/pdf-folder-index/pdf-folder-index.component';
 import { HttpClientModule } from '@angular/common/http';
 
