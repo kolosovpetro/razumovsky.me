@@ -1,11 +1,5 @@
-@font-face {
-  font-family: OpenSansFont;
-  src: url(/src/assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf)
-    format("opentype");
-}
-
 .pdfIndexFolder {
-  font-family: OpenSansFont, sans-serif;
+  font-family: sans-serif;
 }
 
 .pdfIndexFolderContainer {
@@ -59,6 +53,12 @@ table {
     margin-left: 5px;
     top: -5px;
     text-decoration: none;
+  }
+
+  p {
+    min-width: 80px;
+    position: relative;
+    top: -5px;
   }
 }
 
