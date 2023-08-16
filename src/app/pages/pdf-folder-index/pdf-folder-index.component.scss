@@ -1,6 +1,7 @@
 @font-face {
   font-family: OpenSansFont;
-  src: url(/src/assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf) format("opentype");
+  src: url(/src/assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf)
+    format("opentype");
 }
 
 .pdfIndexFolder {
@@ -46,6 +47,12 @@ table {
   padding-bottom: 12px;
   padding-left: 20px;
   color: #a0a0a0;
+
+  span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+  }
 
   a {
     position: relative;

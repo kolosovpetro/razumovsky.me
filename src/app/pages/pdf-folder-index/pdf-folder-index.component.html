@@ -8,10 +8,18 @@
       </tr>
       <tr *ngFor="let pdfJsonItem of pdfJsonItems">
         <td>
-          <img src="../../../assets/img/pdf.png" alt="">
-          <a href="{{pdfJsonItem.Path}}" target="_blank">{{pdfJsonItem.Name}}</a>
+          <span>
+            <svg-icon
+              src="../../../assets/svg/pdf.svg"
+              [svgStyle]="{ 'width.px': 25, 'height.px': 25 }"
+              class="d"
+            ></svg-icon>
+          </span>
+          <a href="{{ pdfJsonItem.Path }}" target="_blank">{{
+            pdfJsonItem.Name
+          }}</a>
         </td>
-        <td>{{pdfJsonItem.Size}} KB</td>
+        <td>{{ pdfJsonItem.Size }} KB</td>
       </tr>
     </table>
   </div>
