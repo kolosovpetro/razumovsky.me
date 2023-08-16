@@ -37,10 +37,10 @@ import { AboutMeLink } from 'src/app/models/AboutMeLink';
 })
 export class AboutMeComponent {
   links = [
-    new AboutMeLink("../../../assets/img/github.png", "https://github.com/kolosovpetro"),
-    new AboutMeLink("../../../assets/img/google-scholar.png", "https://scholar.google.com/citations?user=MpDEhEUAAAAJ&hl=en"),
-    new AboutMeLink("../../../assets/img/orcid.png", "https://orcid.org/0000-0002-6544-8880"),
-    new AboutMeLink("../../../assets/img/telegram.png", "https://t.me/razumovsky_r"),
-    new AboutMeLink("../../../assets/img/credly.png", "https://www.credly.com/users/petro-kolosov"),
+    new AboutMeLink("../../../assets/svg/github.svg", "https://github.com/kolosovpetro"),
+    new AboutMeLink("../../../assets/svg/google-scholar.svg", "https://scholar.google.com/citations?user=MpDEhEUAAAAJ&hl=en"),
+    new AboutMeLink("../../../assets/svg/orcid.svg", "https://orcid.org/0000-0002-6544-8880"),
+    new AboutMeLink("../../../assets/svg/telegram.svg", "https://t.me/razumovsky_r"),
+    new AboutMeLink("../../../assets/svg/credly.svg", "https://www.credly.com/users/petro-kolosov"),
   ]
 }

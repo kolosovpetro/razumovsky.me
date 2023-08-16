@@ -11,11 +11,17 @@
   .NET Developer & Azure DevOps Engineer
 </p>
 <div class="contactMe" [@aboutMeLinkAnimation]>
-  <a
-    *ngFor="let aboutMeLink of links"
-    href="{{ aboutMeLink.link }}"
-    target="blank"
-  >
-    <img class="social" src="{{ aboutMeLink.imagePath }}" alt="social" />
-  </a>
+  <div class="contactMeContainer">
+    <a
+      *ngFor="let aboutMeLink of links"
+      href="{{ aboutMeLink.link }}"
+      target="blank"
+    >
+      <svg-icon
+        src="{{ aboutMeLink.imagePath }}"
+        class="contactMeSvg"
+        [stretch]="true"
+      ></svg-icon>
+    </a>
+  </div>
 </div>

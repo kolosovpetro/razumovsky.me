@@ -1,16 +1,18 @@
 :host {
+  display: flex;
   margin-top: 20px;
   width: 100%;
   text-align: center;
 }
 
 div {
-  display: inline-block;
   vertical-align: top;
   text-align: left;
-  margin: 2%;
-  width: 20%;
+  max-width: 1000px;
+  width: 100%;
   font-size: 33px;
+  margin: auto;
+  padding: 0 10px;
 }
 
 ul {
@@ -18,7 +20,6 @@ ul {
   list-style-type: square;
   list-style-position: outside;
   padding-left: 40px;
-  margin: 40px 0;
 }
 
 li {
@@ -35,5 +36,58 @@ a {
 
   &:hover {
     text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 839px) {
+  div {
+    font-size: 28px;
+  }
+
+  ul {
+    line-height: 170%;
+  }
+
+  a {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 703px) {
+  div {
+    font-size: 25px;
+  }
+
+  ul {
+    line-height: 150%;
+  }
+
+  a {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 533px) {
+  ul {
+    padding-left: 20px;
+  }
+  
+  li::marker {
+    display: inline-block;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 413px) {
+  div {
+    font-size: 22px;
+  }
+
+  ul {
+    line-height: 130%;
+  }
+
+  a {
+    font-size: 19px;
   }
 }

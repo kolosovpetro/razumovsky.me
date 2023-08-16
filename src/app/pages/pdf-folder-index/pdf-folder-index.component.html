@@ -15,11 +15,13 @@
               class="d"
             ></svg-icon>
           </span>
-          <a href="{{ pdfJsonItem.Path }}" target="_blank">{{
-            pdfJsonItem.Name
-          }}</a>
+          <a href="{{ pdfJsonItem.Path }}" target="_blank">
+            {{ pdfJsonItem.Name }}
+          </a>
         </td>
-        <td>{{ pdfJsonItem.Size }} KB</td>
+        <td class="tdSizeColumn">
+          <p>{{ pdfJsonItem.Size }} KB</p>
+        </td>
       </tr>
     </table>
   </div>
