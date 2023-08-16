@@ -47,6 +47,7 @@ a {
   }
 
   ul {
+    margin-top: 15px;
     line-height: 130%;
   }
 
@@ -65,6 +66,10 @@ a {
   a {
     font-size: 23px;
   }
+
+  ul {
+    margin-top: 10px;
+  }
 }
 
 @media screen and (max-width: 533px) {
@@ -75,6 +80,10 @@ a {
 
   a {
     font-size: 23px;
+  }
+
+  ul {
+    line-height: 100%;
   }
 }
 
@@ -87,10 +96,6 @@ a {
   a {
     font-size: 18px;
   }
-
-  ul {
-    line-height: 110%;
-  }
 }
 
 @media screen and (max-width: 360px) {
@@ -101,9 +106,5 @@ a {
 
   a {
     font-size: 18px;
-  }
-
-  ul {
-    line-height: 100%;
   }
 }
