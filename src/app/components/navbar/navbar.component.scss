@@ -32,6 +32,10 @@ a {
 }
 
 @media screen and (max-width: 839px) {
+  .container {
+    padding: 0 7%;
+  }
+
   a {
     font-size: 40px;
     margin: 10px;
