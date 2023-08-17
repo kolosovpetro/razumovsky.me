@@ -19,4 +19,4 @@
 - Open PowerShell as Administrator and type: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned`
 - Check that Angular CLI installed properly: `ng version`
 - Start Angular project: `ng serve --open`
-- Navigate to the root url: `https://localhost:5001/app`
+- Navigate to the root url: `http://localhost:4200/`
