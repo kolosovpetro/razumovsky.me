@@ -36,9 +36,10 @@ a {
   text-align: left;
   color: #d7034e;
   font-size: 30px;
+  text-decoration: none;
 
   &:hover {
-    text-decoration: none;
+    text-decoration: underline;
   }
 }
 

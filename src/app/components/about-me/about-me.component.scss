@@ -41,12 +41,13 @@
   justify-content: space-around;
   margin: auto;
   width: 100%;
-  max-width: 790px;
+  max-width: 810px;
+  // padding: 0 10%;
 
   a {
     display: block;
     text-align: center;
-    margin: 2%;
+    margin: 16px 0px;
     width: 100px;
   }
 }
@@ -85,7 +86,7 @@ a {
   }
 
   .contactMeContainer {
-    padding: 0 10%;
+    // padding: 0 10%;
   }
 }
 
@@ -140,8 +141,26 @@ a {
 
   .contactMeSvg {
     svg {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 413px) {
+  .contactMe {
+    margin-top: 15px;
+
+    a {
+      margin: 0px;
       width: 55px;
-      height: 55px;
+    }
+  }
+
+  .contactMeSvg {
+    svg {
+      width: 50px;
+      height: 50px;
     }
   }
 }
