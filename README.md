@@ -1,27 +1,22 @@
-# HomePage
+# Home Page
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.5.
+### Required Software
 
-## Development server
+- **NVM for windows:** https://github.com/coreybutler/nvm-windows
+- **Angular CLI:** `15.2.9`
+- **NodeJS:** `18.15.0`
+- **NPM:** `9.5.0`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Run the project locally
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Install NVM: https://github.com/coreybutler/nvm-windows
+- Install NodeJS `18.15.0` using NVM & PowerShell as Administrator: `nvm install 18.15.0`
+- Use NodeJS `18.15.0` using NVM via PowerShell as Administrator: `nvm use 18.15.0`
+- Check NodeJS installed properly (should be `18.15.0`): `node -v`
+- Check NPM installed properly (should be `9.5.0`): `npm -v`
+- Restore node modules: `npm ci`
+- Install Angular CLI globally: `npm install -g @angular/cli@15.2.9`
+- Open PowerShell as Administrator and type: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned`
+- Check that Angular CLI installed properly: `ng version`
+- Start Angular project: `ng serve --open`
+- Navigate to the root url: `http://localhost:4200/`
