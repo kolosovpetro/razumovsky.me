@@ -16,10 +16,11 @@ a {
   text-align: center;
   margin: 2%;
   font-size: 45px;
+  text-decoration: none;
 
   &:hover {
     color: #d7034e;
-    text-decoration: none;
+    text-decoration: underline;
   }
 }
 
@@ -29,6 +30,7 @@ a {
 
 .rounterLinkActive {
   color: #d7034e;
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 839px) {
