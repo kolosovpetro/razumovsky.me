@@ -42,7 +42,6 @@
   margin: auto;
   width: 100%;
   max-width: 810px;
-  // padding: 0 10%;
 
   a {
     display: block;
@@ -84,10 +83,6 @@ a {
       height: 80px;
     }
   }
-
-  .contactMeContainer {
-    // padding: 0 10%;
-  }
 }
 
 @media screen and (max-width: 533px) {
@@ -109,8 +104,8 @@ a {
 
   .contactMeSvg {
     svg {
-      width: 70px;
-      height: 70px;
+      width: 60px;
+      height: 60px;
     }
   }
 }
@@ -141,8 +136,8 @@ a {
 
   .contactMeSvg {
     svg {
-      width: 60px;
-      height: 60px;
+      width: 55px;
+      height: 55px;
     }
   }
 }
