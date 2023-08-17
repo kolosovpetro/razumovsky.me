@@ -19,15 +19,15 @@ import {animate, query, stagger, state, style, transition, trigger} from "@angul
 })
 export class LinksComponent {
   links: LinksItem[] = [
-    new LinksItem("Academia Algebrae", "../../../assets/pdf/faulhaber_academia_algebrae.pdf", "by Johann Faulhaber, 1631"),
-    new LinksItem("Cheat Sheet", "../../../assets/pdf/cs_cheat_sheet.pdf", "on Theoretical Computer Science"),
+    new LinksItem("Academia Algebrae", "assets/pdf/faulhaber_academia_algebrae.pdf", "by Johann Faulhaber, 1631"),
+    new LinksItem("Cheat Sheet", "assets/pdf/cs_cheat_sheet.pdf", "on Theoretical Computer Science"),
     new LinksItem("MathOverflow", "https://mathoverflow.net/q/297900", "discussion on A(m,r) coefficients, 2018"),
     new LinksItem("Patterns in Pascal's Triangle", "https://www.cut-the-knot.org/arithmetic/combinatorics/PascalTriangleProperties.shtml", "by Alexander Bogomolny"),
     new LinksItem("Studien Uber die Bernoullischen und Eulerschen Zahlen", "http://eudml.org/doc/148532", "by J. Worpitzky, 1883"),
     new LinksItem("MathOverflow", "https://mathoverflow.net/q/304130", "discussion on U(m,n,k) coefficients, 2018"),
     new LinksItem("arXiv:1011.0076", "https://arxiv.org/abs/1011.0076", "— The Pascal's identity"),
-    new LinksItem("Sums of powers of positive integers and their recurrence relations", "../../../assets/pdf/Sums_of_powers_of_positive_integers_and_their_recurrence_relations.pdf", ""),
-    new LinksItem("J. L. Gross, Combinatorial Methods with Computer Applications, 2008. [Chapter 4]", "../../../assets/pdf/CM4.pdf", ""),
+    new LinksItem("Sums of powers of positive integers and their recurrence relations", "assets/pdf/Sums_of_powers_of_positive_integers_and_their_recurrence_relations.pdf", ""),
+    new LinksItem("J. L. Gross, Combinatorial Methods with Computer Applications, 2008. [Chapter 4]", "assets/pdf/CM4.pdf", ""),
     new LinksItem("How to write the sum of binomial coefficients in terms of polynomials in (n, k)", "https://math.stackexchange.com/questions/3091598", ""),
     new LinksItem("arXiv:math/9207222", "https://arxiv.org/abs/math/9207222", "— D. E. Knuth, Johann Faulhaber and sums of powers"),
     new LinksItem("Albert Tkaczyk", "https://www.linkedin.com/pulse/problem-triangle-developing-polynomial-function-fn-nm-albert-tkaczyk/", "— About the problem of a triangle developing the polynomial function f(n)= n^m, 2018.",

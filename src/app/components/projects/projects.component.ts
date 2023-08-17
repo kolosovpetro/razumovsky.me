@@ -43,8 +43,8 @@ export class ProjectsComponent {
       new ProjectLink("SonarCloud & GHA", "https://github.com/kolosovpetro/SonarCloudViaGithubActions"),
       new ProjectLink("Azure Pipelines KeyVault", "https://github.com/kolosovpetro/AzurePipelinesKeyVault"),
       new ProjectLink("NET Framework IIS Deploy", "https://github.com/kolosovpetro/NetFrameworkDeployIIS"),
-      new ProjectLink("Release Flow Proposal", "https://kolosovpetro.github.io/pdf/ReleaseFlowProposal.pdf"),
-      new ProjectLink("AzDo Best Practices", "https://kolosovpetro.github.io/pdf/AzurePipelinesBestPractices.pdf"),
+      new ProjectLink("Release Flow Proposal", "assets/pdf/ReleaseFlowProposal.pdf"),
+      new ProjectLink("AzDo Best Practices", "assets/pdf/AzurePipelinesBestPractices.pdf"),
     ]),
     new ProjectTopic("Algorithms", [
       new ProjectLink("Monty Hall Problem", "https://github.com/kolosovpetro/MontyHallProblem"),
