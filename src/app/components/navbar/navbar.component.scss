@@ -36,10 +36,6 @@ a {
 }
 
 @media screen and (max-width: 839px) {
-  .container {
-    // padding: 0 7%;
-  }
-
   a {
     font-size: 40px;
     margin: 10px;
@@ -57,13 +53,12 @@ a {
 
 @media screen and (max-width: 533px) {
   a {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 
 @media screen and (max-width: 413px) {
   a {
-    // margin-top: 5px;
     font-size: 23px;
   }
 }
