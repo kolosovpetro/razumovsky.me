@@ -35,7 +35,7 @@ export class MathComponent {
     new MathTopic("Another approach to get derivative of odd-power", [
       new MathLink("Source", "https://github.com/kolosovpetro/AnotherApproachToGetDerivativeOfOddPower"),
       new MathLink("HAL", "https://hal.science/hal-03833765"),
-      new MathLink("PDF", "https://kolosovpetro.github.io/pdf/AnotherApproachToGetDerivativeOfOddPower.pdf"),
+      new MathLink("PDF", "https://quetly3301.github.io/assets/pdf/AnotherApproachToGetDerivativeOfOddPower.pdf"),
     ]),
     new MathTopic("Polynomial identities involving Pascal's triangle rows", [
       new MathLink("Source", "https://github.com/kolosovpetro/PolynomialIdentitiesInvolvingPascalsTriangleRows"),
