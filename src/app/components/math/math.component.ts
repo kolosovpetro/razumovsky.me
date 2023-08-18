@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { MathLink } from 'src/app/models/MathLink';
 import { MathTopic } from 'src/app/models/MathTopic';
 import {animate, query, stagger, state, style, transition, trigger} from "@angular/animations";
+import { Meta, Title } from '@angular/platform-browser';
+import { ConfigService } from 'src/app/services/config.service';
 
 @Component({
   selector: 'app-math',
@@ -19,6 +21,17 @@ import {animate, query, stagger, state, style, transition, trigger} from "@angul
   ]
 })
 export class MathComponent {
+  constructor(titleService: Title, metaService: Meta, configService: ConfigService) {
+    const url = configService.getConfig()?.url;
+
+    titleService.setTitle("@razumovsky_r (Petro Kolosov) -- Math");
+    metaService.updateTag({property: "og:type", content: "profile"});
+    metaService.updateTag({property: "og:title", content: "Mathematical articles of @razumovsky_r (Petro Kolosov)"});
+    metaService.updateTag({property: "og:description", content: "Math research in binomial theorem, polynomials, binomial coefficients, pascal's triangle, faulhaber's formula and bertrand's postulate done by @razumovsky_r (Petro Kolosov)"});
+    metaService.updateTag({property: "og:url", content: `${url}/math/`});
+    metaService.updateTag({property: "og:image", content: `${url}/assets/img/razumovsky_site_card.png`});
+  }
+
   public topics: MathTopic[] = [
     new MathTopic("A study on partial dynamic equation on time scales involving derivatives of polynomials", [
       new MathLink("Source", "https://github.com/kolosovpetro/AStudyOnDynamicEquations"),
