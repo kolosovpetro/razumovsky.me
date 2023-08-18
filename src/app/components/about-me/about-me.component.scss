@@ -65,6 +65,15 @@ a {
     width: 100px;
     height: 100px;
   }
+
+  &:hover {
+    svg {
+      g {
+        transition: 80ms;
+        fill: #d7034e;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 839px) {
