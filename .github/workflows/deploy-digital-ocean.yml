@@ -58,7 +58,7 @@ jobs:
           DEFAULT_VERSION: '1.0.0.2'
           DEFAULT_URL: 'https://quetly3301.github.io'
           NEW_VERSION: ${{ env.GITVERSION_SEMVER }}
-          NEW_URL: ${{ env.VM_DOMAIN_NAME }}
+          NEW_URL: 'https://${{ env.VM_DOMAIN_NAME }}'
 
       - name: 'Npm ci'
         run: npm ci
