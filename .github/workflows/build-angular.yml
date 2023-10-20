@@ -43,8 +43,8 @@ jobs:
       - name: 'Npm ci'
         run: npm ci
 
-      - name: 'Install angular cli 15.2.6'
-        run: npm install -g @angular/cli@15.2.6
+      - name: 'Install angular cli 15.2.9'
+        run: npm install -g @angular/cli@15.2.9
 
       - name: 'Print current angular cli version'
         run: ng version
