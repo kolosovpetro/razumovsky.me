@@ -1,0 +1,98 @@
+name: Build Angular
+
+on:
+  push:
+    branches:
+      - develop
+      - master
+      - deployment
+
+  pull_request:
+    branches:
+      - develop
+      - master
+
+  workflow_dispatch:
+
+env:
+  VM_IP_ADDRESS: razumovsky.me
+  SSH_USER: root
+
+jobs:
+  build-angular:
+    name: Build Angular
+    runs-on: ${{ matrix.environment }}
+    strategy:
+      matrix:
+        environment:
+          - ubuntu-latest
+          - windows-latest
+
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v3
+
+      - name: 'Setup Node.js 18.x'
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+          cache-dependency-path: 'package-lock.json'
+
+      - name: 'Npm ci'
+        run: npm ci
+
+      - name: 'Install angular cli 15.2.6'
+        run: npm install -g @angular/cli@15.2.6
+
+      - name: 'Print current angular cli version'
+        run: ng version
+
+      - name: 'Angular build'
+        run: ng build
+
+      - name: 'Drop artifact'
+        uses: actions/upload-artifact@v3
+        with:
+          name: 'angular-build-${{ matrix.environment }}'
+          path: './dist/home-page'
+
+  deploy:
+    name: Deploy to Digital Ocean
+    needs: build-angular
+    runs-on: ubuntu-latest
+    environment: digital-ocean
+
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: angular-build-ubuntu-latest
+          path: './'
+
+      - name: 'Configure SSH'
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          cat >>~/.ssh/config <<END
+          Host staging
+            HostName ${{ env.VM_IP_ADDRESS }}
+            User ${{ env.SSH_USER }}
+            IdentityFile ~/.ssh/id_rsa
+            StrictHostKeyChecking no
+          END
+        env:
+          SSH_KEY: ${{ secrets.PRIVATE_SSH_KEY }}
+
+      - name: 'Print SSH Config'
+        run: cat ~/.ssh/config
+        shell: bash
+
+      - name: Test SSH Config
+        run: ssh staging -v "hostname"
+        shell: bash
+
+      - name: 'Test SSH Connection'
+        run: ssh -v ${{ env.SSH_USER }}@${{ env.VM_IP_ADDRESS }} "hostname"
+        shell: bash
