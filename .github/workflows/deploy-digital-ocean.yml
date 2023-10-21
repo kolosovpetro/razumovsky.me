@@ -91,11 +91,11 @@ jobs:
           name: angular-build-ubuntu-latest
           path: angular-build-ubuntu-latest
 
-#      - name: 'List directory'
-#        run: |
-#          ls -lsa
-#          ls -lsa angular-build-ubuntu-latest
-#        shell: bash
+      - name: 'List directory'
+        run: |
+          ls -lsa
+          ls -lsa angular-build-ubuntu-latest
+        shell: bash
 
       - name: 'Configure SSH'
         run: |
@@ -112,20 +112,20 @@ jobs:
         env:
           SSH_KEY: ${{ secrets.PRIVATE_SSH_KEY }}
 
-#      - name: 'Print SSH Config'
-#        run: cat ~/.ssh/config
-#        shell: bash
-#
-#      - name: Test SSH Config
-#        run: ssh staging -v "hostname"
-#        shell: bash
-#
-#      - name: 'Test SSH Connection'
-#        run: ssh -v ${{ env.SSH_USER }}@${{ env.VM_DOMAIN_NAME }} "hostname"
-#        shell: bash
+      - name: 'Print SSH Config'
+        run: cat ~/.ssh/config
+        shell: bash
+
+      - name: Test SSH Config
+        run: ssh staging -v "hostname"
+        shell: bash
+
+      - name: 'Test SSH Connection'
+        run: ssh -v ${{ env.SSH_USER }}@${{ env.VM_DOMAIN_NAME }} "hostname"
+        shell: bash
 
       - name: 'Deploy page'
         run: |
-          scp -r -i ~/.ssh/id_rsa ./angular-build-ubuntu-latest/* ${{ env.SSH_USER }}@${{ env.VM_DOMAIN_NAME }}:/home/razumovsky_r/razumovsky_me
+          scp -v -r -i ~/.ssh/id_rsa ./angular-build-ubuntu-latest/* ${{ env.SSH_USER }}@${{ env.VM_DOMAIN_NAME }}:/home/razumovsky_r/razumovsky_me
           ssh ${{ env.SSH_USER }}@${{ env.VM_DOMAIN_NAME }} "sudo systemctl restart nginx"
           ssh ${{ env.SSH_USER }}@${{ env.VM_DOMAIN_NAME }} "sudo nginx -t"
