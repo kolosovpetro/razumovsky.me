@@ -89,7 +89,11 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: angular-build-ubuntu-latest
-          path: './'
+          path: angular-build-ubuntu-latest
+
+      - name: 'List directory'
+        run: ls -lsa
+        shell: bash
 
       - name: 'Configure SSH'
         run: |
