@@ -1,0 +1,139 @@
+name: Deploy to Digital Ocean
+
+on:
+  push:
+    branches:
+      - develop
+      - master
+      - deployment
+
+  pull_request:
+    branches:
+      - develop
+      - master
+
+  workflow_dispatch:
+
+env:
+  VM_DOMAIN_NAME: razumovsky.me
+  SSH_USER: root
+
+jobs:
+  build-angular:
+    name: Build Angular
+    runs-on: ${{ matrix.environment }}
+    strategy:
+      matrix:
+        environment:
+          - ubuntu-latest
+
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: 'Install GitVersion'
+        uses: gittools/actions/gitversion/setup@v0.9.15
+        with:
+          versionSpec: '5.x'
+
+      - name: 'Determine Version'
+        uses: gittools/actions/gitversion/execute@v0.9.15
+
+      - name: 'Setup Node.js 18.x'
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+          cache-dependency-path: 'package-lock.json'
+
+      - name: 'Replace tokens'
+        working-directory: './src/assets/config'
+        run: |
+          sed -i "s|$DEFAULT_VERSION|$NEW_VERSION|" "config.json"
+          sed -i "s|$DEFAULT_URL|$NEW_URL|" "config.json"
+          cat config.json
+        env:
+          DEFAULT_VERSION: '1.0.0.2'
+          DEFAULT_URL: 'https://quetly3301.github.io'
+          NEW_VERSION: ${{ env.GITVERSION_SEMVER }}
+          NEW_URL: 'https://${{ env.VM_DOMAIN_NAME }}'
+
+      - name: 'Update PDF index'
+        shell: pwsh
+        run: |
+          $pathToFolder="./src/assets/pdf"
+          $baseHref="https://${{ env.VM_DOMAIN_NAME }}/assets/pdf/"
+          $json = .\folderAsJson.ps1 -pathToFolder $pathToFolder -baseHref $baseHref
+          $json | Out-File -FilePath "$pathToFolder/DirectoryList.json"
+
+      - name: 'Npm ci'
+        run: npm ci
+
+      - name: 'Install angular cli 15.2.9'
+        run: npm install -g @angular/cli@15.2.9
+
+      - name: 'Print current angular cli version'
+        run: ng version
+
+      - name: 'Angular build'
+        run: ng build
+
+      - name: 'Drop artifact'
+        uses: actions/upload-artifact@v3
+        with:
+          name: 'angular-build-${{ matrix.environment }}'
+          path: './dist/home-page'
+
+  deploy:
+    name: Deploy to Digital Ocean
+    needs: build-angular
+    runs-on: ubuntu-latest
+    environment: digital-ocean
+
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: angular-build-ubuntu-latest
+          path: angular-build-ubuntu-latest
+
+      - name: 'List directory'
+        run: |
+          ls -lsa
+          ls -lsa angular-build-ubuntu-latest
+        shell: bash
+
+      - name: 'Configure SSH'
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          cat >>~/.ssh/config <<END
+          Host staging
+            HostName ${{ env.VM_DOMAIN_NAME }}
+            User ${{ env.SSH_USER }}
+            IdentityFile ~/.ssh/id_rsa
+            StrictHostKeyChecking no
+          END
+        env:
+          SSH_KEY: ${{ secrets.PRIVATE_SSH_KEY }}
+
+      - name: 'Print SSH Config'
+        run: cat ~/.ssh/config
+        shell: bash
+
+      - name: Test SSH Config
+        run: ssh staging -v "hostname"
+        shell: bash
+
+      - name: 'Test SSH Connection'
+        run: ssh -v ${{ env.SSH_USER }}@${{ env.VM_DOMAIN_NAME }} "hostname"
+        shell: bash
+
+      - name: 'Deploy page'
+        run: |
+          scp -v -r -i ~/.ssh/id_rsa ./angular-build-ubuntu-latest/* ${{ env.SSH_USER }}@${{ env.VM_DOMAIN_NAME }}:/home/razumovsky_r/razumovsky_me
+          ssh ${{ env.SSH_USER }}@${{ env.VM_DOMAIN_NAME }} "sudo systemctl restart nginx"
+          ssh ${{ env.SSH_USER }}@${{ env.VM_DOMAIN_NAME }} "sudo nginx -t"

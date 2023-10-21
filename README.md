@@ -1,4 +1,4 @@
-# Home Page
+# razumovsky.me
 
 ### Required Software
 
@@ -20,3 +20,10 @@
 - Check that Angular CLI installed properly: `ng version`
 - Start Angular project: `ng serve --open`
 - Navigate to the root url: `http://localhost:4200/`
+
+### Environments
+
+#### QA
+
+- https://github.com/quetly3301/quetly3301.github.io
+- https://quetly3301.github.io
