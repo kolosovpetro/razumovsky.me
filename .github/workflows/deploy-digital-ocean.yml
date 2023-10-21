@@ -60,6 +60,14 @@ jobs:
           NEW_VERSION: ${{ env.GITVERSION_SEMVER }}
           NEW_URL: 'https://${{ env.VM_DOMAIN_NAME }}'
 
+      - name: 'Update PDF index'
+        shell: pwsh
+        run: |
+          $pathToFolder="./src/assets/pdf"
+          $baseHref="https://${{ env.VM_DOMAIN_NAME }}/assets/pdf/"
+          $json = .\folderAsJson -pathToFolder $pathToFolder -baseHref $baseHref
+          $json | Out-File -FilePath "$pathToFolder/DirectoryList.json"
+
       - name: 'Npm ci'
         run: npm ci
 
