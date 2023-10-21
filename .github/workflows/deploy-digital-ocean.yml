@@ -65,7 +65,7 @@ jobs:
         run: |
           $pathToFolder="./src/assets/pdf"
           $baseHref="https://${{ env.VM_DOMAIN_NAME }}/assets/pdf/"
-          $json = .\folderAsJson -pathToFolder $pathToFolder -baseHref $baseHref
+          $json = .\folderAsJson.ps1 -pathToFolder $pathToFolder -baseHref $baseHref
           $json | Out-File -FilePath "$pathToFolder/DirectoryList.json"
 
       - name: 'Npm ci'
