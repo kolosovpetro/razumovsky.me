@@ -1,5 +1,18 @@
 # razumovsky.me
 
+### Environment setup
+
+- Setup secret GITPAGES_DEPLOY_KEY with SSH private key in GitHub repository settings
+- This is required to deploy to GitHub pages
+
+### Github Actions used
+
+- https://github.com/JamesIves/github-pages-deploy-action
+- https://github.com/webfactory/ssh-agent
+- https://github.com/actions/upload-artifact
+- https://github.com/actions/checkout
+- https://github.com/actions/setup-node
+
 ### Required Software
 
 - **NVM for windows:** https://github.com/coreybutler/nvm-windows
