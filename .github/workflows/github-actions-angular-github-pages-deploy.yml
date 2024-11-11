@@ -51,8 +51,14 @@ jobs:
       - name: 'Angular build'
         run: ng build --base-href "https://${{ env.DEV_PAGE_NAME }}.github.io"
 
-      - name: 'Fix 404 error'
+      - name: 'Add custom 404 page'
         run: cp dist/home-page/index.html dist/home-page/404.html
+
+      - name: 'Copy files'
+        run: |
+          cp -a pdf/. dist/home-page/pdf/
+          cp -a sitemaps/. dist/home-page/sitemaps/
+          cp -a txt/. dist/home-page/txt/
 
       - name: SSH-agent
         uses: webfactory/ssh-agent@v0.9.0
