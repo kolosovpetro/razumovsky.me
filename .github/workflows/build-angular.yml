@@ -7,9 +7,7 @@ on:
       - master
 
   pull_request:
-    branches:
-      - develop
-      - master
+    types: [ opened, synchronize, reopened ]
 
   workflow_dispatch:
 
