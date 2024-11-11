@@ -34,7 +34,7 @@ export class ProjectsComponent {
 
   public topics: ProjectTopic[] = [
     new ProjectTopic("Bachelor project", [
-      new ProjectLink("Mango Messenger API", "https://github.com/MangoInstantMessenger/MangoMessengerAPI"),
+      new ProjectLink("Mango Messenger", "https://github.com/MangoInstantMessenger/MangoMessengerAPI"),
       new ProjectLink("Bachelor Thesis", "https://github.com/MangoInstantMessenger/MangoMessengerBachelorThesis")
     ]),
     new ProjectTopic("Azure", [
@@ -46,7 +46,7 @@ export class ProjectsComponent {
       new ProjectLink("EventGrid Demo", "https://github.com/kolosovpetro/EventGridDemo.AZ204"),
       new ProjectLink("Storage SDK", "https://github.com/kolosovpetro/AzureStorageSDKTraining.AZ204"),
       new ProjectLink("CosmosDB Demo", "https://github.com/kolosovpetro/CosmosDBDemo.AZ204"),
-      new ProjectLink("Storage Queue Demo", "https://github.com/kolosovpetro/StorageQueue.AZ204"),
+      new ProjectLink("Storage Queue", "https://github.com/kolosovpetro/StorageQueue.AZ204"),
       new ProjectLink("Monitoring & Logging", "https://github.com/kolosovpetro/MonitoringAndLogging.AZ204"),
       new ProjectLink("AppService Logging", "https://github.com/kolosovpetro/AppServiceLogging.AZ204"),
     ]),
@@ -55,13 +55,13 @@ export class ProjectsComponent {
       new ProjectLink("Deploy to Ubuntu VM", "https://github.com/kolosovpetro/AzureUbuntuVMDeploy"),
       new ProjectLink("SonarCloud & GHA", "https://github.com/kolosovpetro/SonarCloudViaGithubActions"),
       new ProjectLink("Azure Pipelines KeyVault", "https://github.com/kolosovpetro/AzurePipelinesKeyVault"),
-      new ProjectLink("NET Framework IIS Deploy", "https://github.com/kolosovpetro/NetFrameworkDeployIIS"),
-      new ProjectLink("Release Flow Proposal", "assets/pdf/ReleaseFlowProposal.pdf"),
+      new ProjectLink("NET 4.6 IIS Deploy", "https://github.com/kolosovpetro/NetFrameworkDeployIIS"),
+      new ProjectLink("Release Flow PDF", "assets/pdf/ReleaseFlowProposal.pdf"),
       new ProjectLink("AzDo Best Practices", "assets/pdf/AzurePipelinesBestPractices.pdf"),
     ]),
     new ProjectTopic("Algorithms", [
       new ProjectLink("Monty Hall Problem", "https://github.com/kolosovpetro/MontyHallProblem"),
-      new ProjectLink("Dynamic Coin Change", "https://github.com/TheAlgorithms/C-Sharp/pull/280"),
+      new ProjectLink("Coin Change", "https://github.com/TheAlgorithms/C-Sharp/pull/280"),
       new ProjectLink("Dijkstra Algorithm", "https://github.com/TheAlgorithms/C-Sharp/pull/278"),
       new ProjectLink("Enigma Machine", "https://github.com/kolosovpetro/Enigma"),
       new ProjectLink("Knapsack Problem", "https://github.com/kolosovpetro/KnapsackProblem"),
@@ -71,7 +71,7 @@ export class ProjectsComponent {
       new ProjectLink("RPN Calculator", "https://github.com/kolosovpetro/RpnCalculator"),
       new ProjectLink("Bit Converter", "https://github.com/kolosovpetro/Bit-Converter"),
     ]),
-    new ProjectTopic("Data structures & Patterns", [
+    new ProjectTopic("Data structures", [
       new ProjectLink("Linear Structures", "https://github.com/kolosovpetro/Data-Structures"),
       new ProjectLink("Trees", "https://github.com/kolosovpetro/Tree-Algorithms"),
       new ProjectLink("Graphs", "https://github.com/kolosovpetro/Graph-Algorithms"),
@@ -79,10 +79,10 @@ export class ProjectsComponent {
       new ProjectLink("Design Patterns", "https://github.com/kolosovpetro/Design-Patterns"),
     ]),
     new ProjectTopic("Web Backend", [
-      new ProjectLink("CQRS API", "https://github.com/kolosovpetro/CQRS-Api"),
+      new ProjectLink("Movies API", "https://github.com/kolosovpetro/CQRS-Api"),
       new ProjectLink("Blockchain API", "https://github.com/kolosovpetro/Blockchain-Api"),
-      new ProjectLink("Gadget Store MVC", "https://github.com/kolosovpetro/Gadget-Store-MVC"),
-      new ProjectLink("Bank MVC Test Task", "https://github.com/kolosovpetro/BankMVC"),
+      new ProjectLink("Gadget Store", "https://github.com/kolosovpetro/Gadget-Store-MVC"),
+      new ProjectLink("Bank Test Task", "https://github.com/kolosovpetro/BankMVC"),
       new ProjectLink("REST API", "https://github.com/kolosovpetro/Rest-Api"),
     ]),
     new ProjectTopic("C#", [

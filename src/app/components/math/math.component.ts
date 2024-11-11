@@ -43,7 +43,7 @@ export class MathComponent {
     ]),
     new MathTopic("An unusual identity for odd-powers", [
       new MathLink("PDF", "https://archive.org/details/an-unusual-identity-for-odd-powers"),
-      new MathLink("DOI", "https://archive.org/details/an-unusual-identity-for-odd-powers"),
+      new MathLink("DOI", "https://doi.org/10.1017/mag.2022.129"),
     ]),
     new MathTopic("Another approach to get derivative of odd-power", [
       new MathLink("Source", "https://github.com/kolosovpetro/AnotherApproachToGetDerivativeOfOddPower"),

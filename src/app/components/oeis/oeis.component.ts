@@ -35,7 +35,7 @@ export class OeisComponent {
   constructor(titleService: Title, metaService: Meta, configService: ConfigService) {
     const url = configService.getConfig()?.url;
 
-    titleService.setTitle('@razumovsky_r (Petro Kolosov) -- Oeis');
+    titleService.setTitle('@razumovsky_r (Petro Kolosov) -- OEIS');
     metaService.updateTag({property: 'og:type', content: 'profile' });
     metaService.updateTag({property: 'og:title', content: 'OEIS contributions of @razumovsky_r (Petro Kolosov)'});
     metaService.updateTag({property: 'og:description', content: 'On-Line Encyclopedia of Integer Sequences contributions done by @razumovsky_r (Petro Kolosov)'});
